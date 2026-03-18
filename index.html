@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Pasar Giriwoyo • Pusat Ekonomi & Tradisi Wonogiri</title>
+  <!-- SEO Dasar -->
+  <meta name="description" content="Informasi lengkap Pasar Giriwoyo Wonogiri: hari pasaran Kliwon, komoditas, kuliner thiwul, asal-usul nama, dan suasana tradisional yang masih kental.">
+  <meta name="keywords" content="Pasar Giriwoyo, Wonogiri, pasar tradisional, hari Kliwon, thiwul, blantik, pasar hewan, budaya Jawa, Giriwoyo Wonogiri">
+  <meta name="author" content="Desa Giriwoyo">
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fafbf9; /* putih sedikit abu */
+      color: #2f3e2e;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* container mobile-first */
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 2.8rem 0;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #2b5e2b; /* hijau lembut */
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2 i {
+      margin-right: 10px;
+      color: #5f8b5f;
+      font-size: 1.8rem;
+    }
+
+    /* navigasi minimal */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #ffffffdd;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 30;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddeee0;
+    }
+    .logo-pasar {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #1f4f1f;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #3a5a3a;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: 0.15s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #4f8a4f;
+      color: #1f4f1f;
+    }
+
+    /* hero */
+    .hero {
+      padding: 1.2rem 0 1.5rem;
+    }
+    .hero-panel {
+      background: linear-gradient(135deg, #f1f9f1, #ffffff);
+      border-radius: 40px;
+      padding: 2.2rem 1.8rem;
+      box-shadow: 0 10px 25px rgba(60, 90, 60, 0.06);
+      border: 1px solid #d7f0da;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #1b4c1b;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #4d634d;
+      margin: 1rem 0 1.8rem;
+      font-weight: 400;
+    }
+    .btn-soft {
+      background: #2b5e2b;
+      color: white;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 10px 18px rgba(43,94,43,0.2);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-soft i {
+      font-size: 1.2rem;
+    }
+    .btn-soft:active {
+      transform: scale(0.96);
+      background: white;
+      color: #2b5e2b;
+      border: 2px solid #2b5e2b;
+    }
+
+    /* kartu / grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .card-komoditas {
+      background: white;
+      border-radius: 28px;
+      padding: 1.3rem 1rem 1rem 1rem;
+      border: 1px solid #daecd9;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.01);
+    }
+    .card-komoditas i {
+      font-size: 2.2rem;
+      color: #3d7a3d;
+      margin-bottom: 0.4rem;
+    }
+    .card-komoditas h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e4a1e;
+    }
+    .card-komoditas p {
+      font-size: 0.85rem;
+      color: #535f53;
+      margin-top: 0.2rem;
+    }
+
+    .info-blok {
+      background: white;
+      border-radius: 28px;
+      padding: 1.5rem;
+      border: 1px solid #d1ebd1;
+      margin: 1.2rem 0;
+      box-shadow: 0 5px 12px rgba(80, 120, 80, 0.02);
+    }
+
+    .icon-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .icon-list-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1rem;
+      background: #f0f9ef;
+      padding: 0.8rem 1.2rem;
+      border-radius: 50px;
+    }
+    .icon-list-item i {
+      width: 28px;
+      color: #3e7c3e;
+      font-size: 1.3rem;
+    }
+
+    .highlight-hari {
+      background: #e0f0df;
+      border-radius: 40px;
+      padding: 1.2rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: #174217;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+    .small-note {
+      color: #5c705c;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ilustrasi gambar pasar */
+    .ilustrasi {
+      background: #c6e2c6;
+      border-radius: 40px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2b5a2b;
+      font-size: 3rem;
+      margin: 1.5rem 0 0.5rem;
+      border: 2px solid #a9cfaa;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" opacity="0.2"><path fill="%23336633" d="M20 40 L50 20 L80 30 L110 15 L140 30 L170 20 L180 40 L160 70 L130 90 L100 80 L70 95 L40 85 L20 70 Z"/><circle cx="50" cy="60" r="6" fill="%23336633"/><circle cx="100" cy="55" r="6" fill="%23336633"/><circle cx="150" cy="50" r="6" fill="%23336633"/><rect x="30" y="80" width="20" height="25" fill="%23336633"/><rect x="90" y="75" width="20" height="30" fill="%23336633"/><rect x="140" y="70" width="20" height="35" fill="%23336633"/></svg>');
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    .ilustrasi i {
+      background: rgba(255,255,240,0.7);
+      padding: 1rem 1.8rem;
+      border-radius: 60px;
+      font-size: 2.5rem;
+      backdrop-filter: blur(3px);
+    }
+
+    /* footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 0 2.5rem;
+      color: #6e826e;
+      font-size: 0.9rem;
+      border-top: 1px solid #cde0cd;
+    }
+
+    hr {
+      border: 0.5px solid #d4ead4;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGASI SIMPEL -->
+<div class="navbar">
+  <span class="logo-pasar"><i class="fas fa-store-alt"></i> Giriwoyo</span>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#komoditas">Komoditas</a>
+    <a href="#lokasi">Lokasi</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-panel">
+      <h1>Pasar Giriwoyo – Pusat Ekonomi dan Tradisi</h1>
+      <p>Pasar tradisional dengan budaya khas dan aktivitas ekonomi yang hidup</p>
+      <a href="#info-pasar" class="btn-soft"><i class="fas fa-arrow-down"></i> Lihat Informasi</a>
+    </div>
+  </section>
+
+  <!-- TENTANG PASAR (data lengkap) -->
+  <section id="tentang">
+    <h2><i class="fas fa-history"></i> Tentang Pasar</h2>
+    <div class="info-blok">
+      <p style="font-weight: 500; margin-bottom: 1rem;">🏞️ Pasar Giriwoyo adalah salah satu pasar tradisional di Kecamatan Giriwoyo, Kabupaten Wonogiri, Jawa Tengah. Pasar ini memiliki karakteristik khas pasar tradisional Jawa yang menggabungkan fungsi ekonomi dan sosial masyarakat.</p>
+      <p><i class="fas fa-check-circle" style="color: #2b5e2b;"></i> Menjadi pusat aktivitas warga sekitar, menghubungkan pedagang dan pembeli dari berbagai desa.</p>
+    </div>
+  </section>
+
+  <!-- HARI PASARAN (KIWON) + data tambahan -->
+  <section id="info-pasar">
+    <h2><i class="fas fa-calendar-alt"></i> Hari Pasaran Kliwon</h2>
+    <div class="info-blok" style="background: #ecf9ec;">
+      <div class="highlight-hari">✨ Puncak ramai: KLIWON</div>
+      <p style="margin: 0.5rem 0 0.2rem;"><strong>Setiap hari ada aktivitas,</strong> namun pada hari Kliwon jumlah pedagang dan pembeli meningkat pesat karena pedagang dari luar daerah ikut datang. Aktivitas jual beli hewan dan komoditas lain membludak.</p>
+      <p class="small-note"><i class="fas fa-users"></i> Para blantik (perantara hewan) berkumpul di area khusus.</p>
+    </div>
+
+    <!-- ilustrasi pasar sederhana (suasana) -->
+    <div class="ilustrasi">
+      <i class="fas fa-people-arrows"></i>
+    </div>
+  </section>
+
+  <!-- KOMODITAS (card grid dengan deskripsi singkat) -->
+  <section id="komoditas">
+    <h2><i class="fas fa-boxes"></i> Komoditas Unggulan</h2>
+    <div class="grid-2">
+      <!-- Kebutuhan Pokok -->
+      <div class="card-komoditas">
+        <i class="fas fa-carrot"></i>
+        <h3>Kebutuhan Pokok</h3>
+        <p>Sayur segar, sembako, hasil bumi (palawija), bumbu dapur dari petani lokal.</p>
+      </div>
+      <!-- Pasar Hewan -->
+      <div class="card-komoditas">
+        <i class="fas fa-hippo"></i>
+        <h3>Pasar Hewan</h3>
+        <p>Pada hari Kliwon, aktivitas jual beli kambing dan domba ramai, banyak blantik hadir.</p>
+      </div>
+      <!-- Kuliner Tradisional (dua baris?) biar tetap rapi kita gabung di card bawah? Lebih baik dua card satunya jajanan -->
+      <div class="card-komoditas">
+        <i class="fas fa-utensils"></i>
+        <h3>Kuliner Khas</h3>
+        <p>Thiwul, nasi kuning ayam kampung, aneka jajanan pasar tradisional.</p>
+      </div>
+      <!-- Hasil bumi lain (bisa disisipkan) -->
+      <div class="card-komoditas">
+        <i class="fas fa-seedling"></i>
+        <h3>Hasil Bumi</h3>
+        <p>Singkong, jagung, ketela, palawija — langsung dari lereng karst.</p>
+      </div>
+    </div>
+    <p style="margin-top: 1rem; font-style: italic; color: #3b603b;"><i class="fas fa-spoon"></i> Jangan lewatkan thiwul dan nasi kuning ayam kampung!</p>
+  </section>
+
+  <!-- ASAL-USUL NAMA (Giri + Woyo) -->
+  <section>
+    <h2><i class="fas fa-fountain"></i> Asal-Usul Nama</h2>
+    <div class="info-blok" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+      <div style="background:#e4f3e4; border-radius: 30px; padding: 1rem 1.5rem; flex:1;">
+        <span style="font-weight:700; font-size:2rem;">⛰️</span>
+        <h3 style="color:#1b4c1b;">Giri</h3>
+        <p>Gunung / perbukitan — mencerminkan wilayah karst Giriwoyo.</p>
+      </div>
+      <div style="background:#e4f3e4; border-radius: 30px; padding: 1rem 1.5rem; flex:1;">
+        <span style="font-weight:700; font-size:2rem;">💧</span>
+        <h3 style="color:#1b4c1b;">Woyo</h3>
+        <p>Bening / jernih — sumber air di tengah perbukitan kapur.</p>
+      </div>
+    </div>
+    <p class="small-note" style="padding: 0 0.3rem;">Nama kuno merefleksikan kondisi geografis: pegunungan karst dengan mata air.</p>
+  </section>
+
+  <!-- LOKASI & AKSES (jalur wonogiri-pacitan) -->
+  <section id="lokasi">
+    <h2><i class="fas fa-map-signs"></i> Lokasi & Akses</h2>
+    <div class="info-blok">
+      <div class="icon-list">
+        <div class="icon-list-item"><i class="fas fa-road"></i> Terletak di jalur utama Wonogiri – Pacitan, menjadi titik singgah penting.</div>
+        <div class="icon-list-item"><i class="fas fa-bus"></i> Mudah diakses masyarakat sekitar dan pengguna jalan antar kabupaten.</div>
+        <div class="icon-list-item"><i class="fas fa-map-pin"></i> Kecamatan Giriwoyo, Kabupaten Wonogiri, Jawa Tengah.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUASANA PASAR (deskripsi interaksi) -->
+  <section>
+    <h2><i class="fas fa-comments"></i> Suasana Pasar</h2>
+    <div class="info-blok" style="background: #f9fff9;">
+      <p><i class="fas fa-hand-holding-heart" style="color:#2b5e2b;"></i> Tawar-menawar dengan <strong>bahasa Jawa</strong> khas pedesaan masih sangat kental. Kehidupan sosial masyarakat terasa hangat. Pedagang dan pembeli saling mengenal.</p>
+      <div style="display:flex; gap:0.8rem; margin-top:1rem;">
+        <span class="small-note" style="background:#dff0df; padding:0.3rem 1rem; border-radius: 50px;"><i class="fas fa-smile"></i> guyub</span>
+        <span class="small-note" style="background:#dff0df; padding:0.3rem 1rem; border-radius: 50px;"><i class="fas fa-coffee"></i> ngopi</span>
+        <span class="small-note" style="background:#dff0df; padding:0.3rem 1rem; border-radius: 50px;"><i class="fas fa-drumstick-bite"></i> jajan pasar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KESIMPULAN: pusat budaya & ekonomi -->
+  <section>
+    <h2><i class="fas fa-heart"></i> Lebih dari Sekadar Pasar</h2>
+    <div class="info-blok" style="border-left: 8px solid #4e884e;">
+      <p style="font-size: 1.2rem; font-weight: 400;">✨ Pasar Giriwoyo bukan hanya tempat jual beli, tapi juga pusat budaya dan kehidupan masyarakat. Denyut nadi pedesaan yang masih memegang teguh tradisi pasar.</p>
+    </div>
+    <!-- tambahan foto/ilustrasi kedua -->
+    <div class="ilustrasi" style="height: 120px; margin-top:1rem;">
+      <i class="fas fa-drumstick-bite"></i><i class="fas fa-basket-shopping" style="margin-left:1rem;"></i>
+    </div>
+  </section>
+
+  <!-- FOOTER + KATA KUNCI -->
+  <div class="footer">
+    <p><i class="fas fa-store"></i> Pasar Giriwoyo – Wonogiri, Jawa Tengah</p>
+    <p style="margin-top: 0.5rem;">🗓️ Setiap hari, ramai di Kliwon • <i class="fas fa-tag"></i> #PasarGiriwoyo #Wonogiri #PasarTradisional</p>
+    <hr style="width:50%; margin: 1rem auto;">
+    <p style="color:#8aa08a;">© 2025 · Informasi budaya dan ekonomi Giriwoyo</p>
+  </div>
+</main>
+
+<!-- smooth scroll (opsional) -->
+<script>
+  // Untuk navigasi halus (tidak mengganggu)
+  document.querySelectorAll('.nav-links a, .btn-soft').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
